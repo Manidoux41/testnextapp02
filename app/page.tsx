@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image'
 import Banner from './components/Banner'
 import getAllApparts from '@/lib/getAllApparts'
 import Link from 'next/link'
@@ -16,11 +15,11 @@ export default async function Home() {
             <Link
             href={`/appart/${appart.id}`}
             key={appart.id}
-            className='w-full h-[280px] lg:w-[340px] lg:h-[340px] bg-red-500 fill-slate-600 rounded-md overflow-hidden relative'>
+            className='w-full h-[280px] lg:w-[340px] lg:h-[340px] bg-red-500 fill-slate-600 rounded-lg overflow-hidden relative'>
               <img 
-              className='w-full h-full object-cover'
+              className='w-full h-full object-cover filter brightness-75'
               src={appart.cover} alt="" />
-              <h2 className='text-white font-semibold text-lg absolute bottom-2 left-2 '>{appart.title}</h2>
+              <h2 className='text-white font-medium text-lg absolute bottom-2 left-2 '>{appart.title}</h2>
             </Link>
           ))
         }      
