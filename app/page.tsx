@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import Banner from './components/Banner'
 import getAllApparts from '@/lib/getAllApparts'
