@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import getAllApparts from "@/lib/getAllApparts";
+import Carousel from "./components/Carousel";
 
 type Params = {
   params: {
@@ -18,13 +18,7 @@ export default async function AppartOnly({ params: { appartId } }: Params) {
 
   const content = (
     <div className="w-full h-full py-5">
-      <div className="w-full h-[255px] md:h-[415px] rounded-xl md:rounded-3xl overflow-hidden ">
-        <img
-          src={appart.pictures[0]}
-          alt={appart.title}
-          className="w-full h-full object-cover"
-        />
-      </div>
+      <Carousel pictures={appart.pictures} title={appart.title} />     
     </div>
   );
 
