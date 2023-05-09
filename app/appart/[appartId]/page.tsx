@@ -20,7 +20,7 @@ const AppartOnly = async ({ params: { appartId } }: Params) => {
     <div className="w-full h-full py-5">
       <div className="w-full h-[255px] md:h-[415px] rounded-xl md:rounded-3xl overflow-hidden ">
         <img
-          src={appart.pictures[1]}
+          src={appart.pictures[0]}
           alt={appart.title}
           className="w-full h-full object-cover"
         />
