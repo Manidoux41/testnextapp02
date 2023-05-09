@@ -14,7 +14,7 @@ export default async function AppartOnly({ params: { appartId } }: Params) {
 
   const appart = apparts.find((item) => item.id === appartId);
 
-  // if (!appart) throw new Error("Problème appart");
+  if (!appart) throw new Error("Problème appart");
 
   const content = (
     <div className="w-full h-full py-5">
