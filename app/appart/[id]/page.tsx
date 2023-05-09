@@ -1,8 +1,12 @@
 import React from 'react'
 
-type Props = {}
+type Params = {
+  params: {
+    appartId: string
+  }
+}
 
-const AppartOnly = (props: Props) => {
+const AppartOnly = ({params: { appartId }}: Params) => {
   return (
     <div>AppartOnly</div>
   )
