@@ -8,7 +8,7 @@ type Params = {
   };
 };
 
-const AppartOnly = async ({ params: { appartId } }: Params) => {
+export default async function AppartOnly({ params: { appartId } }: Params) {
   const appartsData: Promise<Appart[]> = getAllApparts();
   const apparts: Appart[] = await appartsData;
 
@@ -29,6 +29,4 @@ const AppartOnly = async ({ params: { appartId } }: Params) => {
   );
 
   return content;
-};
-
-export default AppartOnly;
+}
