@@ -1,6 +1,7 @@
 import React from "react";
 import getAllApparts from "@/lib/getAllApparts";
 import Carousel from "./components/Carousel";
+import Ident from "./components/Ident";
 
 type Params = {
   params: {
@@ -9,9 +10,9 @@ type Params = {
 };
 
 export const metadata = {
-  title: 'Kasa | homePage',
-  description: 'Kasa Home page',
-}
+  title: "Kasa | Logements",
+  description: "Kasa Home page",
+};
 
 export default async function AppartOnly({ params: { appartId } }: Params) {
   const appartsData: Promise<Appart[]> = getAllApparts();
@@ -23,7 +24,13 @@ export default async function AppartOnly({ params: { appartId } }: Params) {
 
   const content = (
     <div className="w-full h-full py-5">
-      <Carousel pictures={appart.pictures} title={appart.title} />     
+      <Carousel pictures={appart.pictures} title={appart.title} />
+      <div className="flex flex-col md:flex-row text-red-500 py-7">
+        <div className="left">
+          <Ident location={appart.location} title={appart.title} />
+        </div>
+        <div className="right"></div>
+      </div>
     </div>
   );
 
