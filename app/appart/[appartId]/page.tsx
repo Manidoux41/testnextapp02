@@ -8,6 +8,11 @@ type Params = {
   };
 };
 
+export const metadata = {
+  title: 'Kasa | homePage',
+  description: 'Kasa Home page',
+}
+
 export default async function AppartOnly({ params: { appartId } }: Params) {
   const appartsData: Promise<Appart[]> = getAllApparts();
   const apparts: Appart[] = await appartsData;

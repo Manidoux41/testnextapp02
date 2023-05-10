@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -22,7 +23,7 @@ const Navbar = (props: Props) => {
   return (
     <nav className="p-4 w-full mx-auto lg:w-[1240px] flex justify-between items-center ">
       <Link href="/">
-        <h1 className="text-red-400 text-4xl font-medium">Kasa</h1>
+        <Image src='/logo.png' width={145} height={47} alt="logo kasa"/>
       </Link>
       <ul className="flex justify-between items-center gap-5 md:gap-14 text-lg md:text-2xl">
         {navLink.map(({ link, name }) => (
